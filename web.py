@@ -7,7 +7,9 @@ import sklearn
 from sklearn.neighbors import KNeighborsClassifier
 
 app = Flask(__name__)
-
+my_dir = os.path.dirname(__file__)
+pickle_file_path = os.path.join(my_dir, 'knnpickle_file')
+loaded_model = pickle.load(open(pickle_file_path, 'rb'))
 loaded_model = pickle.load(open('knnpickle_file', 'rb'))
 
 
