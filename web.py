@@ -3,6 +3,8 @@ import pickle
 
 import numpy as np
 from flask import Flask, render_template, request
+import sklearn
+from sklearn.neighbors import KNeighborsClassifier
 
 app = Flask(__name__)
 
